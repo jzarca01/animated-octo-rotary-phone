@@ -1,0 +1,41 @@
+{
+  "name": "express-rickroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.bundle.js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node dist/server.bundle.js",
+    "start:prod": "ENVIRONMENT=production node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "build": "rollup --config rollup.config.js",
+    "lint": "eslint src/*.js src/**/*.js",
+    "prettier": "prettier \"--write\" src/*.js src/**/*.js"
+  },
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "fs": "0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^3.0.0",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "superpathjoin": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.6",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "rollup": "^2.58.0"
+  }
+}
